@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/estilos.css';
+import { FormData } from '../interfaces/formData';
 
 // Definir tipos para los errores
 type Error = string;
@@ -41,21 +42,18 @@ const Contactenos = () => {
     if (errores.length > 0) {
       setErrores(errores);
     } else {
-      // Crear un objeto con los datos del formulario
-      const formData = {
+      const formData: FormData = { // ¡Aquí tipamos formData con la interfaz!
         nombre,
         email,
         tipoconsulta,
         comentario,
-        timestamp: new Date().toISOString(), // Opcional: guardar la fecha y hora del envío
+        timestamp: new Date().toISOString(),
       };
 
-      // Guardar los datos en LocalStorage como un string JSON
       localStorage.setItem('formData', JSON.stringify(formData));
 
       alert('Formulario enviado y datos guardados en LocalStorage.');
 
-      // Opcional: Puedes resetear el formulario aquí
       formulario.reset();
     }
   };

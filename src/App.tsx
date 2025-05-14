@@ -5,15 +5,15 @@ import AboutUs from './pages/aboutUs';
 import Services from './pages/services';
 import ContactUs from './pages/contactUs';
 import CustomNavbar from './components/Navbar';
-import Footer from './components/Footer'; // Asegúrate de importar el Footer
+import Footer from './components/Footer'; // 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const App: React.FC = () => {
   return (
-    <div className="app-container"> {/* Añade un contenedor */}
+    <div className="app-container"> 
       <CustomNavbar />
-      <div className="content-wrapper"> {/* Contenedor para el contenido principal */}
+      <div className="content-wrapper"> 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
@@ -21,7 +21,7 @@ const App: React.FC = () => {
           <Route path="/contactUs" element={<ContactUs />} />
         </Routes>
       </div>
-      <Footer style={{ marginTop: 'auto' }} /> {/* Aplica marginTop: auto al Footer */}
+      <Footer style={{ marginTop: 'auto' }} />
     </div>
   );
 };

@@ -12,7 +12,7 @@ const Servicios: React.FC = () => {
           <Col className="h-100"> {/* Añade la clase h-100 */}
             <Card className="h-100"> {/* Añade la clase h-100 también a la Card */}
               <Card.Img variant="top" src="Imagenes/ortodoncia.jpg" alt="Ortodoncia" style={{ objectFit: 'cover', height: '200px' }} />
-              <Card.Body className="d-flex flex-column"> {/* Añade flex-column para alinear el botón al final */}
+              <Card.Body className="d-flex flex-column">
                 <Card.Title>Ortodoncia General</Card.Title>
                 <Card.Text>
                   Nos especializamos en proporcionar una amplia gama de servicios dentales para mantener tu salud bucal en óptimas condiciones.
@@ -23,14 +23,14 @@ const Servicios: React.FC = () => {
                 </Card.Text>
                 <h5>Precios</h5>
                 <Card.Text>Precios desde los 150.000$</Card.Text>
-                <Button variant="primary" className="mt-auto">Reservar Hora</Button> {/* mt-auto empuja el botón hacia abajo */}
+                <Button variant="primary" className="mt-auto">Reservar Hora</Button> 
               </Card.Body>
             </Card>
           </Col>
 
-          {/* Urgencia Dental */}
-          <Col className="h-100"> {/* Añade la clase h-100 */}
-            <Card className="h-100"> {/* Añade la clase h-100 también a la Card */}
+         
+          <Col className="h-100"> 
+            <Card className="h-100"> 
               <Card.Img variant="top" src="Imagenes/Imagen9.jpg" alt="Urgencia Dental" style={{ objectFit: 'cover', height: '200px' }} />
               <Card.Body className="d-flex flex-column">
                 <Card.Title>Urgencia Dental</Card.Title>
@@ -48,9 +48,9 @@ const Servicios: React.FC = () => {
             </Card>
           </Col>
 
-          {/* Implantología */}
-          <Col className="h-100"> {/* Añade la clase h-100 */}
-            <Card className="h-100"> {/* Añade la clase h-100 también a la Card */}
+         
+          <Col className="h-100"> 
+            <Card className="h-100"> 
               <Card.Img variant="top" src="Imagenes/imagen8.png" alt="Implantología" style={{ objectFit: 'cover', height: '200px' }} />
               <Card.Body className="d-flex flex-column">
                 <Card.Title>Implantología</Card.Title>
@@ -68,9 +68,9 @@ const Servicios: React.FC = () => {
             </Card>
           </Col>
 
-          {/* Odontopediatría */}
-          <Col className="h-100"> {/* Añade la clase h-100 */}
-            <Card className="h-100"> {/* Añade la clase h-100 también a la Card */}
+        
+          <Col className="h-100"> 
+            <Card className="h-100">
               <Card.Img variant="top" src="Imagenes/Imagen10.png" alt="Odontopediatría" style={{ objectFit: 'cover', height: '200px' }} />
               <Card.Body className="d-flex flex-column">
                 <Card.Title>Odontopediatría</Card.Title>
@@ -88,9 +88,9 @@ const Servicios: React.FC = () => {
             </Card>
           </Col>
 
-          {/* Blanqueamiento */}
-          <Col className="h-100"> {/* Añade la clase h-100 */}
-            <Card className="h-100"> {/* Añade la clase h-100 también a la Card */}
+         
+          <Col className="h-100"> 
+            <Card className="h-100"> 
               <Card.Img variant="top" src="Imagenes/Imagen11.jpg" alt="Blanqueamiento" style={{ objectFit: 'cover', height: '200px' }} />
               <Card.Body className="d-flex flex-column">
                 <Card.Title>Blanqueamiento</Card.Title>
@@ -108,9 +108,9 @@ const Servicios: React.FC = () => {
             </Card>
           </Col>
 
-          {/* Radiografía Dental */}
-          <Col className="h-100"> {/* Añade la clase h-100 */}
-            <Card className="h-100"> {/* Añade la clase h-100 también a la Card */}
+          
+          <Col className="h-100"> 
+            <Card className="h-100"> 
               <Card.Img variant="top" src="Imagenes/Imagen12.webp" alt="Radiografía Dental" style={{ objectFit: 'cover', height: '200px' }} />
               <Card.Body className="d-flex flex-column">
                 <Card.Title>Radiografía Dental</Card.Title>
