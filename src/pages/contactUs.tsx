@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../styles/estilos.css';
-import { FormData } from '../interfaces/formData';
+import { FormData } from '../interfaces/formData'; // Asegúrate de que la ruta a la interfaz sea correcta
 
 // Definir tipos para los errores
 type Error = string;
@@ -11,6 +11,8 @@ type FormEvent = React.FormEvent<HTMLFormElement>;
 const Contactenos = () => {
   // Estado para los errores
   const [errores, setErrores] = useState<Error[]>([]);
+  // Referencia para el contador de formularios enviados (se reinicia al cargar la página)
+  const contadorRef = useRef(0);
 
   // Validación de email
   const esEmailValido = (email: string): boolean => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -42,7 +44,7 @@ const Contactenos = () => {
     if (errores.length > 0) {
       setErrores(errores);
     } else {
-      const formData: FormData = { // ¡Aquí tipamos formData con la interfaz!
+      const nuevoFormData: FormData = {
         nombre,
         email,
         tipoconsulta,
@@ -50,9 +52,15 @@ const Contactenos = () => {
         timestamp: new Date().toISOString(),
       };
 
-      localStorage.setItem('formData', JSON.stringify(formData));
+      // Incrementar el contador
+      contadorRef.current += 1;
+      // Crear la clave con el contador
+      const key = `FormularioEnviado_${contadorRef.current}`;
 
-      alert('Formulario enviado y datos guardados en LocalStorage.');
+      // Guardar el formulario en LocalStorage con la clave única
+      localStorage.setItem(key, JSON.stringify(nuevoFormData));
+
+      alert(`Formulario enviado con éxito`);
 
       formulario.reset();
     }
