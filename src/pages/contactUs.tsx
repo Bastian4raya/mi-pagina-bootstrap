@@ -24,23 +24,39 @@ const Contactenos = () => {
     const errores: Error[] = [];
 
     // Obtener los valores del formulario
-    const nombre = (event.target as HTMLFormElement).nombre.value;
-    const email = (event.target as HTMLFormElement).email.value;
-    const comuna = (event.target as HTMLFormElement).tipoconsulta.value;
-    const comentario = (event.target as HTMLFormElement).mensaje.value;
+    const formulario = event.target as HTMLFormElement;
+    const nombre = formulario.nombre.value;
+    const email = formulario.email.value;
+    const tipoconsulta = formulario.tipoconsulta.value;
+    const comentario = formulario.mensaje.value;
 
     // Validaciones
     if (nombreVacio(nombre)) errores.push('El campo nombre es obligatorio.');
     if (!email) errores.push('El campo email es obligatorio.');
-    else if (!esEmailValido(email)) errores.push('El email ingresado es inválido');
-    if (!comuna) errores.push('El tipo de consulta es obligatorio.');
+    else if (!esEmailValido(email)) errores.push('El email ingresado es inválido.');
+    if (!tipoconsulta) errores.push('El tipo de consulta es obligatorio.');
     if (!comentario) errores.push('El campo mensaje es obligatorio.');
 
     // Mostrar errores si existen
     if (errores.length > 0) {
       setErrores(errores);
     } else {
-      alert('Enviando formulario...');
+      // Crear un objeto con los datos del formulario
+      const formData = {
+        nombre,
+        email,
+        tipoconsulta,
+        comentario,
+        timestamp: new Date().toISOString(), // Opcional: guardar la fecha y hora del envío
+      };
+
+      // Guardar los datos en LocalStorage como un string JSON
+      localStorage.setItem('formData', JSON.stringify(formData));
+
+      alert('Formulario enviado y datos guardados en LocalStorage.');
+
+      // Opcional: Puedes resetear el formulario aquí
+      formulario.reset();
     }
   };
 
@@ -93,7 +109,7 @@ const Contactenos = () => {
         </div>
       </div>
 
-      {/* Sección de mapa */}
+      {/* Sección de mapa (sin cambios) */}
       <section className="mapa mt-5">
         <h2>Ubicación</h2>
         <p>Nos ubicamos en Av. Concha y Toro 2730, Puente Alto, cerca del metro Protectora de la Infancia. ¡Te esperamos!</p>

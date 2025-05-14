@@ -6,6 +6,8 @@ import Services from './pages/services';
 import ContactUs from './pages/contactUs';
 import CustomNavbar from './components/Navbar';
 import Footer from './components/Footer'; // Asegúrate de importar el Footer
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const App: React.FC = () => {
   return (

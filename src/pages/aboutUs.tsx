@@ -1,4 +1,3 @@
-// src/pages/SobreNosotros.tsx
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import '../styles/estilos.css';
@@ -23,7 +22,12 @@ const AboutUs: React.FC = () => {
               </p>
             </Col>
             <Col md={6}>
-              <Image src="https://mercuriocentrocomercial.com/wp-content/uploads/2020/09/IMG_2712-scaled.jpg" alt="Dentisalud Historia" fluid />
+              <Image
+                src="https://mercuriocentrocomercial.com/wp-content/uploads/2020/09/IMG_2712-scaled.jpg"
+                alt="Dentisalud Historia"
+                fluid
+                className="imagen-pequena" // Añadimos la clase
+              />
             </Col>
           </Row>
         </section>
@@ -37,7 +41,12 @@ const AboutUs: React.FC = () => {
               </p>
             </Col>
             <Col md={6}>
-              <Image src="https://media.licdn.com/dms/image/v2/C4E22AQF1j4L0khVIVg/feedshare-shrink_800/feedshare-shrink_800/0/1677119522056?e=2147483647&v=beta&t=R4ucHF82vJDUhFgEQ-C5PCKISIluRm2vKIZx_h_1nYI" alt="Dentisalud Equipo" fluid />
+              <Image
+                src="https://media.licdn.com/dms/image/v2/C4E22AQF1j4L0khVIVg/feedshare-shrink_800/feedshare-shrink_800/0/1677119522056?e=2147483647&v=beta&t=R4ucHF82vJDUhFgEQ-C5PCKISIluRm2vKIZx_h_1nYI"
+                alt="Dentisalud Equipo"
+                fluid
+                className="imagen-pequena" // Añadimos la clase
+              />
             </Col>
           </Row>
         </section>
@@ -51,7 +60,12 @@ const AboutUs: React.FC = () => {
               </p>
             </Col>
             <Col md={6}>
-              <Image src="https://www.clinicasturrionmonescillo.com/wp-content/uploads/2020/03/img_7092-copy-1024x683.jpg" alt="Dentisalud Misión" fluid />
+              <Image
+                src="https://www.clinicasturrionmonescillo.com/wp-content/uploads/2020/03/img_7092-copy-1024x683.jpg"
+                alt="Dentisalud Misión"
+                fluid
+                className="imagen-pequena" // Añadimos la clase
+              />
             </Col>
           </Row>
         </section>
@@ -65,7 +79,12 @@ const AboutUs: React.FC = () => {
               </p>
             </Col>
             <Col md={6}>
-              <Image src="Imagenes/imagen7.jpeg" alt="Dentisalud Visión" fluid />
+              <Image
+                src="Imagenes/imagen7.jpeg"
+                alt="Dentisalud Visión"
+                fluid
+                className="imagen-pequena" // Añadimos la clase
+              />
             </Col>
           </Row>
         </section>

@@ -1,4 +1,3 @@
-// src/pages/Home.tsx
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Carousel from '../components/Carousel';
@@ -22,7 +21,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-tooth fa-3x mb-2"></i>
                 <h3>Odontología General</h3>
                 <p>Prevención, diagnóstico y tratamiento de problemas dentales comunes.</p>
-                <Button href="/servicios" variant="outline-primary" size="sm">Más Información</Button>
+                <Button href="/services" variant="outline-primary" size="sm">Más Información</Button>
               </div>
             </Col>
             <Col md={4} className="mb-3">
@@ -30,7 +29,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-tooth fa-3x mb-2"></i>
                 <h3>Ortodoncia</h3>
                 <p>Corrección de la alineación dental para una sonrisa perfecta.</p>
-                <Button href="/servicios" variant="outline-primary" size="sm">Más Información</Button>
+                <Button href="/services" variant="outline-primary" size="sm">Más Información</Button>
               </div>
             </Col>
             <Col md={4} className="mb-3">
@@ -38,7 +37,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-tooth fa-3x mb-2"></i>
                 <h3>Implantes Dentales</h3>
                 <p>Soluciones duraderas para reemplazar dientes perdidos.</p>
-                <Button href="/servicios" variant="outline-primary" size="sm">Más Información</Button>
+                <Button href="/services" variant="outline-primary" size="sm">Más Información</Button>
               </div>
             </Col>
             <Col md={4} className="mb-3">
@@ -46,7 +45,7 @@ const Home: React.FC = () => {
                 <i className="fas fa-smile fa-3x mb-2"></i>
                 <h3>Estética Dental</h3>
                 <p>Tratamientos para mejorar la apariencia de tu sonrisa.</p>
-                <Button href="/servicios" variant="outline-primary" size="sm">Más Información</Button>
+                <Button href="/services" variant="outline-primary" size="sm">Más Información</Button>
               </div>
             </Col>
           </Row>

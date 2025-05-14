@@ -10,7 +10,8 @@ const CustomNavbar: React.FC = () => {
           <img
             src="/Imagenes/Icono.png"
             alt="Logo"
-            style={{ height: '40px', marginRight: '10px' }}
+            className="navbar-logo-pequeno" 
+            style={{ marginRight: '10px' }} 
           />
           DentiSalud
         </Navbar.Brand>
